@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6766341-C764-4BCE-9FBF-C0B7F7B5254A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Barcode_billing.My.MyApplication</StartupObject>
+    <RootNamespace>Barcode_billing</RootNamespace>
+    <AssemblyName>Barcode_billing</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Barcode_billing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Barcode_billing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.0, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account.Designer.vb">
+      <DependentUpon>account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ALL_Data.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALL_Data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="all_views.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>all_views.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Company\company_form.Designer.vb">
+      <DependentUpon>company_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Company\company_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dash_view1.Designer.vb">
+      <DependentUpon>Dash_view1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Dash_view1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Graph_view\graph1.Designer.vb">
+      <DependentUpon>graph1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Graph_view\graph1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Graph_view\graph_db.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>graph_db.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main_bill_all_view.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main_bill_all_view.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_Customer.Designer.vb">
+      <DependentUpon>L_Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Dashboard\L_item.Designer.vb">
+      <DependentUpon>L_item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Dashboard\L_main.Designer.vb">
+      <DependentUpon>L_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Dashboard\L_receipt.Designer.vb">
+      <DependentUpon>L_receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Dashboard\L_sales.Designer.vb">
+      <DependentUpon>L_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\L_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\All_bill_view\All_bill_summary.Designer.vb">
+      <DependentUpon>All_bill_summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\All_bill_view\All_bill_summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\All_bill_view\jama_db.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jama_db.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\All_bill_view\mbn_db.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mbn_db.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Closing_bal\balance_clo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balance_clo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Closing_bal\rpt_clo_bal.Designer.vb">
+      <DependentUpon>rpt_clo_bal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Closing_bal\rpt_clo_bal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\bar_dbDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\bar_dbDataSet7.vb">
+      <DependentUpon>bar_dbDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_sales_bill.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_sales_bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bil_v.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bil_v.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dvt.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dvt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Item_sale.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Item_sale.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\Balance_genarator.vb" />
+    <Compile Include="Main_Bill\barcode_bill.Designer.vb">
+      <DependentUpon>barcode_bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\barcode_bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bar_dbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet2.vb">
+      <DependentUpon>bar_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bar_dbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bar_dbDataSet4.vb">
+      <DependentUpon>bar_dbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="billing1.Designer.vb">
+      <DependentUpon>billing1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="billing1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt\cash_receipt.Designer.vb">
+      <DependentUpon>cash_receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\cash_receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\cash_sub.Designer.vb">
+      <DependentUpon>cash_sub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\cash_sub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cash_table.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cash_table.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\cash_trf.Designer.vb">
+      <DependentUpon>cash_trf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\cash_trf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cst_name.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cst_name.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="customer_add.Designer.vb">
+      <DependentUpon>customer_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customer_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cust_name.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cust_name.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="da_pt_nave.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>da_pt_nave.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dptv36.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dptv36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\gat.Designer.vb">
+      <DependentUpon>gat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\gat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imp.Designer.vb">
+      <DependentUpon>imp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="imp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_add.Designer.vb">
+      <DependentUpon>Item_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Item_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\Main_bill.Designer.vb">
+      <DependentUpon>Main_bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\Main_bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\majuri_sub.Designer.vb">
+      <DependentUpon>majuri_sub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\majuri_sub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\mod_sub.Designer.vb">
+      <DependentUpon>mod_sub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\mod_sub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="opening.Designer.vb">
+      <DependentUpon>opening.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Bill\patala.Designer.vb">
+      <DependentUpon>patala.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\patala.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ptv12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ptv12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="p_dtls.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p_dtls.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\ratecut.Designer.vb">
+      <DependentUpon>ratecut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Bill\ratecut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt\Receipt_main.Designer.vb">
+      <DependentUpon>Receipt_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\Receipt_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\balance_main_bill.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balance_main_bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\balance_main_bill.vb">
+      <DependentUpon>balance_main_bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Barcode_bill_wise.Designer.vb">
+      <DependentUpon>Barcode_bill_wise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Barcode_bill_wise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Bill_main.Designer.vb">
+      <DependentUpon>Bill_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Bill_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\Item_WiseSales1.Designer.vb">
+      <DependentUpon>Item_WiseSales1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\Item_WiseSales1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Item_all.Designer.vb">
+      <DependentUpon>Report_Item_all.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_Item_all.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Pat_view.Designer.vb">
+      <DependentUpon>Report_Pat_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_Pat_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\Sub_Item_wise_sales.Designer.vb">
+      <DependentUpon>Sub_Item_wise_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Item Wise Sale%27s\Sub_Item_wise_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Dashboard\Report_Dashboard.Designer.vb">
+      <DependentUpon>Report_Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Dashboard\Report_Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt.Designer.vb">
+      <DependentUpon>rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unique_pt_name.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Unique_pt_name.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wastage_in.Designer.vb">
+      <DependentUpon>wastage_in.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wastage_in.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="account.resx">
+      <DependentUpon>account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\company_form.resx">
+      <DependentUpon>company_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Dash_view1.resx">
+      <DependentUpon>Dash_view1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Graph_view\graph1.resx">
+      <DependentUpon>graph1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Graph_view\gr_design.rdlc" />
+    <EmbeddedResource Include="Main_Bill\barcode_bill.resx">
+      <DependentUpon>barcode_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="billing1.resx">
+      <DependentUpon>billing1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt\cash_receipt.resx">
+      <DependentUpon>cash_receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\cash_sub.resx">
+      <DependentUpon>cash_sub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt\cash_trf.resx">
+      <DependentUpon>cash_trf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_add.resx">
+      <DependentUpon>customer_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\gat.resx">
+      <DependentUpon>gat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imp.resx">
+      <DependentUpon>imp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_add.resx">
+      <DependentUpon>Item_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\L_Customer.resx">
+      <DependentUpon>L_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\L_item.resx">
+      <DependentUpon>L_item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\L_main.resx">
+      <DependentUpon>L_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\L_receipt.resx">
+      <DependentUpon>L_receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\L_sales.resx">
+      <DependentUpon>L_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\All_bill_view\All_bill.rdlc" />
+    <EmbeddedResource Include="Report\All_bill_view\All_bill_summary.resx">
+      <DependentUpon>All_bill_summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\barcode_bill_wise.rdlc" />
+    <EmbeddedResource Include="Report\Barcode_bill_wise.resx">
+      <DependentUpon>Barcode_bill_wise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Bill_main.resx">
+      <DependentUpon>Bill_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Closing_bal\closing_bal.rdlc" />
+    <EmbeddedResource Include="Report\Closing_bal\rpt_clo_bal.resx">
+      <DependentUpon>rpt_clo_bal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Item Wise Sale%27s\Item_S1.rdlc" />
+    <EmbeddedResource Include="Report\item_all.rdlc" />
+    <EmbeddedResource Include="Main_Bill\Main_bill.resx">
+      <DependentUpon>Main_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\majuri_sub.resx">
+      <DependentUpon>majuri_sub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\mod_sub.resx">
+      <DependentUpon>mod_sub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opening.resx">
+      <DependentUpon>opening.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\patala.resx">
+      <DependentUpon>patala.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Bill\ratecut.resx">
+      <DependentUpon>ratecut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt\Receipt_main.resx">
+      <DependentUpon>Receipt_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report\Item Wise Sale%27s\Item_WiseSales1.resx">
+      <DependentUpon>Item_WiseSales1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Main_bill_design.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report\Report_Item_all.resx">
+      <DependentUpon>Report_Item_all.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Item Wise Sale%27s\Sub_Item_wise_sales.resx">
+      <DependentUpon>Sub_Item_wise_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Dashboard\Report_Dashboard.resx">
+      <DependentUpon>Report_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_patala.rdlc" />
+    <EmbeddedResource Include="Report\Report_Pat_view.resx">
+      <DependentUpon>Report_Pat_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt.resx">
+      <DependentUpon>rpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wastage_in.resx">
+      <DependentUpon>wastage_in.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ALL_Data.xsc">
+      <DependentUpon>ALL_Data.xsd</DependentUpon>
+    </None>
+    <None Include="ALL_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALL_Data.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALL_Data.xss">
+      <DependentUpon>ALL_Data.xsd</DependentUpon>
+    </None>
+    <None Include="all_views.xsc">
+      <DependentUpon>all_views.xsd</DependentUpon>
+    </None>
+    <None Include="all_views.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>all_views.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="all_views.xss">
+      <DependentUpon>all_views.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet.xsc">
+      <DependentUpon>bar_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet.xss">
+      <DependentUpon>bar_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet1.xsc">
+      <DependentUpon>bar_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet1.xss">
+      <DependentUpon>bar_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet2.xsc">
+      <DependentUpon>bar_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet2.xss">
+      <DependentUpon>bar_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet3.xsc">
+      <DependentUpon>bar_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet3.xss">
+      <DependentUpon>bar_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet4.xsc">
+      <DependentUpon>bar_dbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet4.xss">
+      <DependentUpon>bar_dbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet5.xsc">
+      <DependentUpon>bar_dbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet5.xss">
+      <DependentUpon>bar_dbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet6.xsc">
+      <DependentUpon>bar_dbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bar_dbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_dbDataSet6.xss">
+      <DependentUpon>bar_dbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\Graph_view\graph_db.xsc">
+      <DependentUpon>graph_db.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\Graph_view\graph_db.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>graph_db.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dashboard\Graph_view\graph_db.xss">
+      <DependentUpon>graph_db.xsd</DependentUpon>
+    </None>
+    <None Include="Main_bill_all_view.xsc">
+      <DependentUpon>Main_bill_all_view.xsd</DependentUpon>
+    </None>
+    <None Include="Main_bill_all_view.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Main_bill_all_view.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Main_bill_all_view.xss">
+      <DependentUpon>Main_bill_all_view.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\DataSources\balance_clo.clo_balDataTable.datasource" />
+    <None Include="My Project\DataSources\balance_clo.datasource" />
+    <None Include="My Project\DataSources\Graph_db.datasource" />
+    <None Include="My Project\DataSources\Graph_db.DataTable1DataTable.datasource" />
+    <None Include="My Project\DataSources\graph_db.graph_d1DataTable.datasource" />
+    <None Include="My Project\DataSources\graph_db1.datasource" />
+    <None Include="My Project\DataSources\jama_db.datasource" />
+    <None Include="My Project\DataSources\jama_db.j1DataTable.datasource" />
+    <None Include="My Project\DataSources\Main_bill.datasource" />
+    <None Include="My Project\DataSources\Main_bill_all_view.main_bill_1DataTable.datasource" />
+    <None Include="My Project\DataSources\mbn_db.datasource" />
+    <None Include="My Project\DataSources\mbn_db.m1DataTable.datasource" />
+    <None Include="My Project\DataSources\wet_fine_mj.datasource" />
+    <None Include="My Project\DataSources\wet_fine_mj.db1DataTable.datasource" />
+    <None Include="Report\All_bill_view\jama_db.xsc">
+      <DependentUpon>jama_db.xsd</DependentUpon>
+    </None>
+    <None Include="Report\All_bill_view\jama_db.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jama_db.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\All_bill_view\jama_db.xss">
+      <DependentUpon>jama_db.xsd</DependentUpon>
+    </None>
+    <None Include="Report\All_bill_view\mbn_db.xsc">
+      <DependentUpon>mbn_db.xsd</DependentUpon>
+    </None>
+    <None Include="Report\All_bill_view\mbn_db.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mbn_db.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\All_bill_view\mbn_db.xss">
+      <DependentUpon>mbn_db.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Closing_bal\balance_clo.xsc">
+      <DependentUpon>balance_clo.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Closing_bal\balance_clo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>balance_clo.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\Closing_bal\balance_clo.xss">
+      <DependentUpon>balance_clo.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Item Wise Sale%27s\bar_dbDataSet7.xsc">
+      <DependentUpon>bar_dbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Item Wise Sale%27s\bar_dbDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_dbDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\Item Wise Sale%27s\bar_dbDataSet7.xss">
+      <DependentUpon>bar_dbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bar_sales_bill.xsc">
+      <DependentUpon>bar_sales_bill.xsd</DependentUpon>
+    </None>
+    <None Include="bar_sales_bill.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bar_sales_bill.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bar_sales_bill.xss">
+      <DependentUpon>bar_sales_bill.xsd</DependentUpon>
+    </None>
+    <None Include="bil_v.xsc">
+      <DependentUpon>bil_v.xsd</DependentUpon>
+    </None>
+    <None Include="bil_v.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bil_v.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bil_v.xss">
+      <DependentUpon>bil_v.xsd</DependentUpon>
+    </None>
+    <None Include="cash_table.xsc">
+      <DependentUpon>cash_table.xsd</DependentUpon>
+    </None>
+    <None Include="cash_table.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cash_table.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cash_table.xss">
+      <DependentUpon>cash_table.xsd</DependentUpon>
+    </None>
+    <None Include="cst_name.xsc">
+      <DependentUpon>cst_name.xsd</DependentUpon>
+    </None>
+    <None Include="cst_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cst_name.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cst_name.xss">
+      <DependentUpon>cst_name.xsd</DependentUpon>
+    </None>
+    <None Include="cust_name.xsc">
+      <DependentUpon>cust_name.xsd</DependentUpon>
+    </None>
+    <None Include="cust_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cust_name.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cust_name.xss">
+      <DependentUpon>cust_name.xsd</DependentUpon>
+    </None>
+    <None Include="da_pt_nave.xsc">
+      <DependentUpon>da_pt_nave.xsd</DependentUpon>
+    </None>
+    <None Include="da_pt_nave.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>da_pt_nave.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="da_pt_nave.xss">
+      <DependentUpon>da_pt_nave.xsd</DependentUpon>
+    </None>
+    <None Include="dptv36.xsc">
+      <DependentUpon>dptv36.xsd</DependentUpon>
+    </None>
+    <None Include="dptv36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dptv36.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dptv36.xss">
+      <DependentUpon>dptv36.xsd</DependentUpon>
+    </None>
+    <None Include="dvt.xsc">
+      <DependentUpon>dvt.xsd</DependentUpon>
+    </None>
+    <None Include="dvt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dvt.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dvt.xss">
+      <DependentUpon>dvt.xsd</DependentUpon>
+    </None>
+    <None Include="Item_sale.xsc">
+      <DependentUpon>Item_sale.xsd</DependentUpon>
+    </None>
+    <None Include="Item_sale.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Item_sale.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Item_sale.xss">
+      <DependentUpon>Item_sale.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\balance_main_bill.datasource" />
+    <None Include="My Project\DataSources\bill_show.datasource" />
+    <None Include="My Project\DataSources\it_sales.datasource" />
+    <None Include="My Project\DataSources\it_sales.Item_wise_salesDataTable.datasource" />
+    <None Include="My Project\DataSources\it_sales.Table1DataTable.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="ptv12.xsc">
+      <DependentUpon>ptv12.xsd</DependentUpon>
+    </None>
+    <None Include="ptv12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ptv12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ptv12.xss">
+      <DependentUpon>ptv12.xsd</DependentUpon>
+    </None>
+    <None Include="Report\balance_main_bill.xsc">
+      <DependentUpon>balance_main_bill.xsd</DependentUpon>
+    </None>
+    <None Include="Report\balance_main_bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>balance_main_bill.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\balance_main_bill.xss">
+      <DependentUpon>balance_main_bill.xsd</DependentUpon>
+    </None>
+    <None Include="Unique_pt_name.xsc">
+      <DependentUpon>Unique_pt_name.xsd</DependentUpon>
+    </None>
+    <None Include="Unique_pt_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Unique_pt_name.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Unique_pt_name.xss">
+      <DependentUpon>Unique_pt_name.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="p_dtls.xsc">
+      <DependentUpon>p_dtls.xsd</DependentUpon>
+    </None>
+    <None Include="p_dtls.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>p_dtls.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="p_dtls.xss">
+      <DependentUpon>p_dtls.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\red-cross-symbol-icon-as-delete-remove-fail-failure-incorr-incorrect-answer-89999776 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2819%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2819%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2820%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %2814%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paid-bill-50.png" />
+    <None Include="Resources\icons8-add-property-50-2.png" />
+    <None Include="Resources\icons8-customer-50.png" />
+    <None Include="Resources\icons8-add-shopping-cart-50-2.png" />
+    <None Include="Resources\icons8-barcode-reader-50.png" />
+    <None Include="Resources\icons8-add-shopping-cart-50.png" />
+    <None Include="Resources\icons8-combo-chart-50-2.png" />
+    <None Include="Resources\icons8-bill-50.png" />
+    <None Include="Resources\icons8-add-property-50.png" />
+    <None Include="Resources\951846.png" />
+    <None Include="Resources\3597075.png" />
+    <None Include="Resources\4150991.png" />
+    <None Include="Resources\4151168.png" />
+    <None Include="Resources\35970751.png" />
+    <None Include="Resources\2496740.png" />
+    <None Include="Resources\1571028.png" />
+    <None Include="Resources\2751615.png" />
+    <None Include="Resources\metal.jpg" />
+    <None Include="Resources\mt.jpg" />
+    <None Include="Resources\2879440.png" />
+    <None Include="Resources\3699516.png" />
+    <None Include="Resources\rct.jpg" />
+    <None Include="Resources\1504097.png" />
+    <None Include="Resources\3048127.png" />
+    <None Include="Resources\3048243.png" />
+    <None Include="Resources\3048124.png" />
+    <None Include="Resources\31001.png" />
+    <None Include="Resources\1497126.png" />
+    <None Include="Resources\3699522.png" />
+    <None Include="Resources\3699683.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

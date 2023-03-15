@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bar_dbDataSet6" targetNamespace="http://tempuri.org/bar_dbDataSet6.xsd" xmlns:mstns="http://tempuri.org/bar_dbDataSet6.xsd" xmlns="http://tempuri.org/bar_dbDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bar_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bar_dbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Barcode_billing.My.MySettings.GlobalReference.Default.bar_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Bill_wise_groupTableAdapter" GeneratorDataComponentClassName="Bill_wise_groupTableAdapter" Name="Bill_wise_group" UserDataComponentName="Bill_wise_groupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bar_dbConnectionString (MySettings)" DbObjectName="bar_db.dbo.Bill_wise_group" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT bill_no FROM dbo.Bill_wise_group</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bill_no" DataSetColumn="bill_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bar_dbDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bar_dbDataSet6" msprop:Generator_UserDSName="bar_dbDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Bill_wise_group" msprop:Generator_TableClassName="Bill_wise_groupDataTable" msprop:Generator_TableVarName="tableBill_wise_group" msprop:Generator_TablePropName="Bill_wise_group" msprop:Generator_RowDeletingName="Bill_wise_groupRowDeleting" msprop:Generator_RowChangingName="Bill_wise_groupRowChanging" msprop:Generator_RowEvHandlerName="Bill_wise_groupRowChangeEventHandler" msprop:Generator_RowDeletedName="Bill_wise_groupRowDeleted" msprop:Generator_UserTableName="Bill_wise_group" msprop:Generator_RowChangedName="Bill_wise_groupRowChanged" msprop:Generator_RowEvArgName="Bill_wise_groupRowChangeEvent" msprop:Generator_RowClassName="Bill_wise_groupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bill_no" msprop:Generator_ColumnVarNameInTable="columnbill_no" msprop:Generator_ColumnPropNameInRow="bill_no" msprop:Generator_ColumnPropNameInTable="bill_noColumn" msprop:Generator_UserColumnName="bill_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

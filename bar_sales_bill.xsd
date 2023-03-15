@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bar_sales_bill" targetNamespace="http://tempuri.org/bar_sales_bill.xsd" xmlns:mstns="http://tempuri.org/bar_sales_bill.xsd" xmlns="http://tempuri.org/bar_sales_bill.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bar_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bar_dbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Barcode_billing.My.MySettings.GlobalReference.Default.bar_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="barcode_bill_wise_salesTableAdapter" GeneratorDataComponentClassName="barcode_bill_wise_salesTableAdapter" Name="barcode_bill_wise_sales" UserDataComponentName="barcode_bill_wise_salesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bar_dbConnectionString (MySettings)" DbObjectName="bar_db.dbo.barcode_bill_wise_sales" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT date, customer_name, Bill_No, barcode_item, Bar_count, Weight, Tanch, Fine, PCS, Majuri, Total_Majuri FROM dbo.barcode_bill_wise_sales</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="customer_name" DataSetColumn="customer_name" />
+              <Mapping SourceColumn="Bill_No" DataSetColumn="Bill_No" />
+              <Mapping SourceColumn="barcode_item" DataSetColumn="barcode_item" />
+              <Mapping SourceColumn="Bar_count" DataSetColumn="Bar_count" />
+              <Mapping SourceColumn="Weight" DataSetColumn="Weight" />
+              <Mapping SourceColumn="Tanch" DataSetColumn="Tanch" />
+              <Mapping SourceColumn="Fine" DataSetColumn="Fine" />
+              <Mapping SourceColumn="PCS" DataSetColumn="PCS" />
+              <Mapping SourceColumn="Majuri" DataSetColumn="Majuri" />
+              <Mapping SourceColumn="Total_Majuri" DataSetColumn="Total_Majuri" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bar_sales_bill" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bar_sales_bill" msprop:Generator_UserDSName="bar_sales_bill">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="barcode_bill_wise_sales" msprop:Generator_TableClassName="barcode_bill_wise_salesDataTable" msprop:Generator_TableVarName="tablebarcode_bill_wise_sales" msprop:Generator_TablePropName="barcode_bill_wise_sales" msprop:Generator_RowDeletingName="barcode_bill_wise_salesRowDeleting" msprop:Generator_RowChangingName="barcode_bill_wise_salesRowChanging" msprop:Generator_RowEvHandlerName="barcode_bill_wise_salesRowChangeEventHandler" msprop:Generator_RowDeletedName="barcode_bill_wise_salesRowDeleted" msprop:Generator_UserTableName="barcode_bill_wise_sales" msprop:Generator_RowChangedName="barcode_bill_wise_salesRowChanged" msprop:Generator_RowEvArgName="barcode_bill_wise_salesRowChangeEvent" msprop:Generator_RowClassName="barcode_bill_wise_salesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="_date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill_No" msprop:Generator_ColumnVarNameInTable="columnBill_No" msprop:Generator_ColumnPropNameInRow="Bill_No" msprop:Generator_ColumnPropNameInTable="Bill_NoColumn" msprop:Generator_UserColumnName="Bill_No">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="barcode_item" msprop:Generator_ColumnVarNameInTable="columnbarcode_item" msprop:Generator_ColumnPropNameInRow="barcode_item" msprop:Generator_ColumnPropNameInTable="barcode_itemColumn" msprop:Generator_UserColumnName="barcode_item" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bar_count" msprop:Generator_ColumnVarNameInTable="columnBar_count" msprop:Generator_ColumnPropNameInRow="Bar_count" msprop:Generator_ColumnPropNameInTable="Bar_countColumn" msprop:Generator_UserColumnName="Bar_count" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_UserColumnName="Weight" type="xs:double" minOccurs="0" />
+              <xs:element name="Tanch" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTanch" msprop:Generator_ColumnPropNameInRow="Tanch" msprop:Generator_ColumnPropNameInTable="TanchColumn" msprop:Generator_UserColumnName="Tanch" type="xs:double" minOccurs="0" />
+              <xs:element name="Fine" msprop:Generator_ColumnVarNameInTable="columnFine" msprop:Generator_ColumnPropNameInRow="Fine" msprop:Generator_ColumnPropNameInTable="FineColumn" msprop:Generator_UserColumnName="Fine" type="xs:double" minOccurs="0" />
+              <xs:element name="PCS" msprop:Generator_ColumnVarNameInTable="columnPCS" msprop:Generator_ColumnPropNameInRow="PCS" msprop:Generator_ColumnPropNameInTable="PCSColumn" msprop:Generator_UserColumnName="PCS" type="xs:double" minOccurs="0" />
+              <xs:element name="Majuri" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMajuri" msprop:Generator_ColumnPropNameInRow="Majuri" msprop:Generator_ColumnPropNameInTable="MajuriColumn" msprop:Generator_UserColumnName="Majuri" type="xs:double" minOccurs="0" />
+              <xs:element name="Total_Majuri" msprop:Generator_ColumnVarNameInTable="columnTotal_Majuri" msprop:Generator_ColumnPropNameInRow="Total_Majuri" msprop:Generator_ColumnPropNameInTable="Total_MajuriColumn" msprop:Generator_UserColumnName="Total_Majuri" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

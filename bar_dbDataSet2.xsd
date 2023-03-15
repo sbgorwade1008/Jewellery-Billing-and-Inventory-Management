@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bar_dbDataSet2" targetNamespace="http://tempuri.org/bar_dbDataSet2.xsd" xmlns:mstns="http://tempuri.org/bar_dbDataSet2.xsd" xmlns="http://tempuri.org/bar_dbDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bar_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bar_dbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Barcode_billing.My.MySettings.GlobalReference.Default.bar_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="customer ViewTableAdapter" GeneratorDataComponentClassName="customer_ViewTableAdapter" Name="customer View" UserDataComponentName="customer ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bar_dbConnectionString (MySettings)" DbObjectName="bar_db.dbo.[customer View]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, City, [Group], Mob_No, Fine, Majuri, Amount FROM dbo.[customer View]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Group" DataSetColumn="Group" />
+              <Mapping SourceColumn="Mob_No" DataSetColumn="Mob_No" />
+              <Mapping SourceColumn="Fine" DataSetColumn="Fine" />
+              <Mapping SourceColumn="Majuri" DataSetColumn="Majuri" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bar_dbDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bar_dbDataSet2" msprop:Generator_UserDSName="bar_dbDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="customer_x0020_View" msprop:Generator_TableClassName="customer_ViewDataTable" msprop:Generator_TableVarName="tablecustomer_View" msprop:Generator_TablePropName="customer_View" msprop:Generator_RowDeletingName="customer_ViewRowDeleting" msprop:Generator_RowChangingName="customer_ViewRowChanging" msprop:Generator_RowEvHandlerName="customer_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="customer_ViewRowDeleted" msprop:Generator_UserTableName="customer View" msprop:Generator_RowChangedName="customer_ViewRowChanged" msprop:Generator_RowEvArgName="customer_ViewRowChangeEvent" msprop:Generator_RowClassName="customer_ViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Group" msprop:Generator_ColumnVarNameInTable="columnGroup" msprop:Generator_ColumnPropNameInRow="Group" msprop:Generator_ColumnPropNameInTable="GroupColumn" msprop:Generator_UserColumnName="Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mob_No" msprop:Generator_ColumnVarNameInTable="columnMob_No" msprop:Generator_ColumnPropNameInRow="Mob_No" msprop:Generator_ColumnPropNameInTable="Mob_NoColumn" msprop:Generator_UserColumnName="Mob_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fine" msprop:Generator_ColumnVarNameInTable="columnFine" msprop:Generator_ColumnPropNameInRow="Fine" msprop:Generator_ColumnPropNameInTable="FineColumn" msprop:Generator_UserColumnName="Fine" type="xs:double" minOccurs="0" />
+              <xs:element name="Majuri" msprop:Generator_ColumnVarNameInTable="columnMajuri" msprop:Generator_ColumnPropNameInRow="Majuri" msprop:Generator_ColumnPropNameInTable="MajuriColumn" msprop:Generator_UserColumnName="Majuri" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:customer_x0020_View" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

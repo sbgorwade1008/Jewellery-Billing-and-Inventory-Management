@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="da_pt_nave" targetNamespace="http://tempuri.org/da_pt_nave.xsd" xmlns:mstns="http://tempuri.org/da_pt_nave.xsd" xmlns="http://tempuri.org/da_pt_nave.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bar_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bar_dbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Barcode_billing.My.MySettings.GlobalReference.Default.bar_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Patala_v_naveTableAdapter" GeneratorDataComponentClassName="Patala_v_naveTableAdapter" Name="Patala_v_nave" UserDataComponentName="Patala_v_naveTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bar_dbConnectionString (MySettings)" DbObjectName="bar_db.dbo.Patala_v_nave" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT bn, cust_name, date_in, pat_no, st, pat_pcs, pat_wet, pat_tanch, pat_fine, pat_details FROM dbo.Patala_v_nave</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bn" DataSetColumn="bn" />
+              <Mapping SourceColumn="cust_name" DataSetColumn="cust_name" />
+              <Mapping SourceColumn="date_in" DataSetColumn="date_in" />
+              <Mapping SourceColumn="pat_no" DataSetColumn="pat_no" />
+              <Mapping SourceColumn="st" DataSetColumn="st" />
+              <Mapping SourceColumn="pat_pcs" DataSetColumn="pat_pcs" />
+              <Mapping SourceColumn="pat_wet" DataSetColumn="pat_wet" />
+              <Mapping SourceColumn="pat_tanch" DataSetColumn="pat_tanch" />
+              <Mapping SourceColumn="pat_fine" DataSetColumn="pat_fine" />
+              <Mapping SourceColumn="pat_details" DataSetColumn="pat_details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="da_pt_nave" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="da_pt_nave" msprop:Generator_UserDSName="da_pt_nave">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Patala_v_nave" msprop:Generator_TableClassName="Patala_v_naveDataTable" msprop:Generator_TableVarName="tablePatala_v_nave" msprop:Generator_TablePropName="Patala_v_nave" msprop:Generator_RowDeletingName="Patala_v_naveRowDeleting" msprop:Generator_RowChangingName="Patala_v_naveRowChanging" msprop:Generator_RowEvHandlerName="Patala_v_naveRowChangeEventHandler" msprop:Generator_RowDeletedName="Patala_v_naveRowDeleted" msprop:Generator_UserTableName="Patala_v_nave" msprop:Generator_RowChangedName="Patala_v_naveRowChanged" msprop:Generator_RowEvArgName="Patala_v_naveRowChangeEvent" msprop:Generator_RowClassName="Patala_v_naveRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bn" msprop:Generator_ColumnVarNameInTable="columnbn" msprop:Generator_ColumnPropNameInRow="bn" msprop:Generator_ColumnPropNameInTable="bnColumn" msprop:Generator_UserColumnName="bn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cust_name" msprop:Generator_ColumnVarNameInTable="columncust_name" msprop:Generator_ColumnPropNameInRow="cust_name" msprop:Generator_ColumnPropNameInTable="cust_nameColumn" msprop:Generator_UserColumnName="cust_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_in" msprop:Generator_ColumnVarNameInTable="columndate_in" msprop:Generator_ColumnPropNameInRow="date_in" msprop:Generator_ColumnPropNameInTable="date_inColumn" msprop:Generator_UserColumnName="date_in" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pat_no" msprop:Generator_ColumnVarNameInTable="columnpat_no" msprop:Generator_ColumnPropNameInRow="pat_no" msprop:Generator_ColumnPropNameInTable="pat_noColumn" msprop:Generator_UserColumnName="pat_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="st" msprop:Generator_ColumnVarNameInTable="columnst" msprop:Generator_ColumnPropNameInRow="st" msprop:Generator_ColumnPropNameInTable="stColumn" msprop:Generator_UserColumnName="st" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pat_pcs" msprop:Generator_ColumnVarNameInTable="columnpat_pcs" msprop:Generator_ColumnPropNameInRow="pat_pcs" msprop:Generator_ColumnPropNameInTable="pat_pcsColumn" msprop:Generator_UserColumnName="pat_pcs" type="xs:int" minOccurs="0" />
+              <xs:element name="pat_wet" msprop:Generator_ColumnVarNameInTable="columnpat_wet" msprop:Generator_ColumnPropNameInRow="pat_wet" msprop:Generator_ColumnPropNameInTable="pat_wetColumn" msprop:Generator_UserColumnName="pat_wet" type="xs:double" minOccurs="0" />
+              <xs:element name="pat_tanch" msprop:Generator_ColumnVarNameInTable="columnpat_tanch" msprop:Generator_ColumnPropNameInRow="pat_tanch" msprop:Generator_ColumnPropNameInTable="pat_tanchColumn" msprop:Generator_UserColumnName="pat_tanch" type="xs:double" minOccurs="0" />
+              <xs:element name="pat_fine" msprop:Generator_ColumnVarNameInTable="columnpat_fine" msprop:Generator_ColumnPropNameInRow="pat_fine" msprop:Generator_ColumnPropNameInTable="pat_fineColumn" msprop:Generator_UserColumnName="pat_fine" type="xs:double" minOccurs="0" />
+              <xs:element name="pat_details" msprop:Generator_ColumnVarNameInTable="columnpat_details" msprop:Generator_ColumnPropNameInRow="pat_details" msprop:Generator_ColumnPropNameInTable="pat_detailsColumn" msprop:Generator_UserColumnName="pat_details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
